@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
-import { ArticleCard } from './ArticleCard';
+import { ArticleCard } from '../components/ArticleCard';
 import { getArticles, getCategoryBySlug, formatDate, calculateReadTime, type ArticleWithDetails, type Category } from '../../lib/api';
-import { Skeleton } from '../ui/skeleton';
+import { Skeleton } from '../components/ui/skeleton';
 
 export function CategoryPage() {
   const { slug } = useParams<{ slug: string }>();
