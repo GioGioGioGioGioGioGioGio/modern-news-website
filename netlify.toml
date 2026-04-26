@@ -12,3 +12,8 @@
   to = "/index.html"
   status = 200
   force = true
+
+[[redirects]]
+  from = "/:filePath((?!api/).*)"
+  to = "/index.html"
+  status = 200
