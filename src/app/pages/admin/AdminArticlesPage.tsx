@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
 import { Link, useSearchParams } from 'react-router-dom';
 import { Plus, Search, Filter, Edit, Trash2, Eye, MoreHorizontal } from 'lucide-react';
-import { supabase } from '../../lib/supabase';
-import { formatDate } from '../../lib/api';
+import { supabase } from '../../../lib/supabase';
+import { formatDate } from '../../../lib/api';
 
 interface Article {
   id: string;

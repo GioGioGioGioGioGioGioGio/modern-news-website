@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Plus, Edit, Trash2, ArrowUp } from 'lucide-react';
-import { supabase } from '../../lib/supabase';
+import { supabase } from '../../../lib/supabase';
 
 interface Category {
   id: string;

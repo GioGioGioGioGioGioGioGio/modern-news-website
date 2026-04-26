@@ -2,8 +2,8 @@ import { useEffect, useState, useCallback } from 'react';
 import { useParams, useNavigate, Link } from 'react-router-dom';
 import { RichTextEditor } from '../../components/RichTextEditor';
 import { ArrowLeft, Save, Eye, Trash2, Upload, X } from 'lucide-react';
-import { supabase } from '../../lib/supabase';
-import { uploadImage } from '../../lib/api';
+import { supabase } from '../../../lib/supabase';
+import { uploadImage } from '../../../lib/api';
 
 interface ArticleFormData {
   title: string;

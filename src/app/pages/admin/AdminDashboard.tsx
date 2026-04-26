@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FileText, Users, Eye, TrendingUp, Plus } from 'lucide-react';
-import { supabase } from '../../lib/supabase';
+import { supabase } from '../../../lib/supabase';
 
 interface Stats {
   totalArticles: number;

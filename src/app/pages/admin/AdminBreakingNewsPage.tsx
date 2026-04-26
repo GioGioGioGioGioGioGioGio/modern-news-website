@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Plus, Edit, Trash2, Zap } from 'lucide-react';
-import { supabase } from '../../lib/supabase';
+import { supabase } from '../../../lib/supabase';
 
 interface BreakingNews {
   id: string;
