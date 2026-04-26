@@ -3,7 +3,7 @@ import { useParams, useNavigate, Link } from 'react-router-dom';
 import { supabase } from '../../../lib/supabase';
 import { uploadImage } from '../../../lib/api';
 import { RichTextEditor } from '../../components/RichTextEditor';
-import { ArrowLeft } from 'lucide-react';
+import { ArrowLeft, Save, Eye, Trash2, X, Upload } from 'lucide-react';
 
 interface ArticleFormData {
   title: string;
