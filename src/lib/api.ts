@@ -104,7 +104,9 @@ export async function getArticleBySlug(slug: string): Promise<ArticleWithDetails
 
   if (error) return null;
 
-  await supabase.rpc('increment_article_views', { article_id: data.id }).catch(() => {});
+  try {
+    await supabase.rpc('increment_article_views', { article_id: data.id });
+  } catch (e) {}
 
   return data as ArticleWithDetails;
 }
@@ -233,8 +235,9 @@ export async function updateArticle(id: string, updates: Partial<{
   category_id: string;
   status: 'draft' | 'published' | 'archived';
   featured: boolean;
+  published_at?: string | null;
 }>): Promise<Article> {
-  const updateData = { ...updates };
+  const updateData: any = { ...updates };
   
   if (updates.status === 'published' && !updates.published_at) {
     updateData.published_at = new Date().toISOString();

@@ -1,3 +1,4 @@
+/// <reference types="vite/client" />
 import { createClient } from '@supabase/supabase-js';
 
 const supabaseUrl = import.meta.env.VITE_SUPABASE_URL || '';
@@ -48,9 +49,6 @@ export interface Article {
   published_at: string | null;
   created_at: string;
   updated_at: string;
-  author?: Profile;
-  category?: Category;
-  tags?: Tag[];
 }
 
 export interface ArticleWithDetails extends Article {
@@ -67,7 +65,6 @@ export interface Comment {
   parent_id: string | null;
   created_at: string;
   updated_at: string;
-  user?: Profile;
 }
 
 export interface BreakingNews {
