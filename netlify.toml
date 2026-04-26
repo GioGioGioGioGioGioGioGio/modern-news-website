@@ -1,19 +1,12 @@
 [build]
-  command = "npm run build"
+  command = "corepack enable && pnpm install && pnpm build"
   publish = "dist"
-  functions = "netlify/functions"
 
 [build.environment]
-  VITE_SUPABASE_URL = ""
-  VITE_SUPABASE_ANON_KEY = ""
+  VITE_SUPABASE_URL = "https://syordsqpcmokmvebfyfz.supabase.co"
+  VITE_SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InN5b3Jkc3FwY21va212ZWJmeWZ6Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzcxNjAyNjUsImV4cCI6MjA5MjczNjI2NX0.KhDN6XQ6xmD8Kg_Hk1iTpAkQ5i1tdXkLTwrepE-av2s"
 
 [[redirects]]
   from = "/*"
-  to = "/index.html"
-  status = 200
-  force = true
-
-[[redirects]]
-  from = "/:filePath((?!api/).*)"
   to = "/index.html"
   status = 200
